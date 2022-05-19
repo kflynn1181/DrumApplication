@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/test"
+    tools:context=".MainActivity3">
+
+
+    <ImageButton
+        android:id="@+id/imageButtonSequencer4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="148dp"
+        android:background="@drawable/record"
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/theRedCircle4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginBottom="71dp"
+        android:background="@drawable/redcircleforsequencer"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="63dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Playback/Stop"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonStop4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="224dp"
+        android:background="@drawable/playback2"
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="44dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Sequencer"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Harpsichord"
+        android:layout_width="88dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginBottom="492dp"
+        android:background="@drawable/harpsichord"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="     Harpsichord"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/GrandPiano"
+        android:layout_width="88dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="492dp"
+        android:background="@drawable/grandpiano2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="     Grand Piano"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Keyboard"
+        android:layout_width="88dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="416dp"
+        android:background="@drawable/keyboard"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="     Keyboard"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/DX7"
+        android:layout_width="88dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginBottom="416dp"
+        android:background="@drawable/dx7"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="     Synth (DX7)"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/CS80"
+        android:layout_width="88dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginBottom="416dp"
+        android:background="@drawable/cs80"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="     Synth (CS-80)"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/c2"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b" />
+
+    <Button
+        android:id="@+id/c2backup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/b" />
+
+    <Button
+        android:id="@+id/b"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  B"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/c2"
+        app:layout_constraintStart_toEndOf="@+id/a" />
+
+    <Button
+        android:id="@+id/bbackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/c2"
+        app:layout_constraintStart_toEndOf="@+id/a" />
+
+    <Button
+        android:id="@+id/a"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  A"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/b"
+        app:layout_constraintStart_toEndOf="@+id/g" />
+
+    <Button
+        android:id="@+id/abackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/b"
+        app:layout_constraintStart_toEndOf="@+id/g" />
+
+    <Button
+        android:id="@+id/g"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  G"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/a"
+        app:layout_constraintStart_toEndOf="@+id/f" />
+
+    <Button
+        android:id="@+id/gbackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/a"
+        app:layout_constraintStart_toEndOf="@+id/f" />
+
+    <Button
+        android:id="@+id/f"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  F"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/g"
+        app:layout_constraintStart_toEndOf="@+id/e" />
+
+    <Button
+        android:id="@+id/fbackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/g"
+        app:layout_constraintStart_toEndOf="@+id/e" />
+
+    <Button
+        android:id="@+id/e"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  E"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f"
+        app:layout_constraintStart_toEndOf="@+id/d" />
+
+    <Button
+        android:id="@+id/ebackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f"
+        app:layout_constraintStart_toEndOf="@+id/d" />
+
+    <Button
+        android:id="@+id/d"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  D"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/e"
+        app:layout_constraintStart_toEndOf="@+id/c" />
+
+    <Button
+        android:id="@+id/dbackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/e"
+        app:layout_constraintStart_toEndOf="@+id/c" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDrums"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/mediadrum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="92dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Drums"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonDrums" />
+
+    <ImageButton
+        android:id="@+id/imageButtonGuitar"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/mediaguitar"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonPiano"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonDrums"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="92dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Guitar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonGuitar" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPiano"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/mediapiano"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="92dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Piano"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonPiano" />
+
+    <Button
+        android:id="@+id/c"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/d"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cbackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/d"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cs"
+        android:layout_width="45dp"
+        android:layout_height="113dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="   C#"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/d"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/c" />
+
+    <Button
+        android:id="@+id/ds"
+        android:layout_width="45dp"
+        android:layout_height="113dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="   D#"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/e"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toEndOf="@+id/d" />
+
+    <Button
+        android:id="@+id/fs"
+        android:layout_width="45dp"
+        android:layout_height="113dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="   F#"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/g"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toEndOf="@+id/f" />
+
+    <Button
+        android:id="@+id/gs"
+        android:layout_width="45dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="   G#"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/a"
+        app:layout_constraintStart_toEndOf="@+id/g" />
+
+    <Button
+        android:id="@+id/as"
+        android:layout_width="45dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="   A#"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/b"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/gs" />
+
+    <View
+        android:layout_width="406dp"
+        android:layout_height="217dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="144dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/css"
+        android:layout_width="35dp"
+        android:layout_height="113dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="   C#"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/c2" />
+
+    <Button
+        android:id="@+id/Organ"
+        android:layout_width="88dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginBottom="492dp"
+        android:background="@drawable/organ"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="     Organ"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonVolumePiano"
+        android:layout_width="122dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="64dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:text="Volume Control"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarPianoOrgan"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="100dp"
+        android:max="10"
+        android:progress="10"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarPianoKeyboard"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="100dp"
+        android:max="10"
+        android:progress="10"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarPianoDx7"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="100dp"
+        android:max="10"
+        android:progress="10"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarPianoCs80"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="100dp"
+        android:max="10"
+        android:progress="10"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarPianoGrandPiano"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="100dp"
+        android:max="10"
+        android:progress="10"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarPianoHarpsichord"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="100dp"
+        android:max="10"
+        android:progress="10"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarPiano"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDownOctavePiano"
+        android:layout_width="122dp"
+        android:layout_height="34dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:text="- Octave"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonUpOctavePiano"
+        android:layout_width="122dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="32dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:text="+ Octave"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switchChords"
+        android:layout_width="91dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/bauhausregular"
+        android:text="Chords"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
