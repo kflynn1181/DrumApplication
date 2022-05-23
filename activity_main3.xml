@@ -724,4 +724,27 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageButton
+        android:id="@+id/imageButtonResetPiano"
+        android:layout_width="65dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewResetPiano"
+        android:layout_width="63dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Reset"
+        android:textColor="#B2FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
