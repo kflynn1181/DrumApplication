@@ -4,7 +4,7 @@ This application was created by Kevin Flynn (C18502203).
 
 One folder is contained in this repository: 'DrumMachineTest1'.
 
-This folder contains every file that is necessary for the application.
+This folder contains every file created for the application.
 
 Six individual files are contained in this repository: 'MainActivity.java', 'MainActivity2.java', 'MainActivity3.java', 'activity_main.xml', 'activity_main2.xml' and 'activity_main3.xml'.
 
