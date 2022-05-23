@@ -472,11 +472,23 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/c2" />
 
+    <View
+        android:id="@+id/guitarpedalsview"
+        android:layout_width="406dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:background="@color/beige"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:id="@+id/guitarReverb"
         android:layout_width="65dp"
         android:layout_height="126dp"
-        android:layout_marginStart="17dp"
+        android:layout_marginEnd="212dp"
         android:background="@drawable/guitarreverb"
         android:fontFamily="@font/bauhausregular"
         android:gravity="bottom"
@@ -485,13 +497,13 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/guitarDelay"
         android:layout_width="65dp"
         android:layout_height="126dp"
-        android:layout_marginStart="112dp"
+        android:layout_marginEnd="144dp"
         android:background="@drawable/guitardelay"
         android:fontFamily="@font/bauhausregular"
         android:gravity="bottom"
@@ -500,13 +512,13 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/guitarChorus"
         android:layout_width="65dp"
         android:layout_height="126dp"
-        android:layout_marginEnd="112dp"
+        android:layout_marginEnd="76dp"
         android:background="@drawable/guitarchorus"
         android:fontFamily="@font/bauhausregular"
         android:gravity="bottom"
@@ -521,7 +533,7 @@
         android:id="@+id/guitarDrive"
         android:layout_width="65dp"
         android:layout_height="126dp"
-        android:layout_marginEnd="17dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/guitardrive"
         android:fontFamily="@font/bauhausregular"
         android:gravity="bottom"
@@ -531,18 +543,6 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <View
-        android:id="@+id/guitarpedalsview"
-        android:layout_width="406dp"
-        android:layout_height="144dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginEnd="3dp"
-        android:background="@color/beige"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:id="@+id/guitarfretboardsview"
@@ -1369,6 +1369,106 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonStopGuitar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/playback2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSequencerGuitar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/record"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Sequencer"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/theRedCircleGuitar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/redcircleforsequencer"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="63dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="72dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Playback/Stop"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonVolumeGuitar"
+        android:layout_width="122dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="76dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:text="Volume Control"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarGuitar"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonResetGuitar"
+        android:layout_width="65dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewResetGuitar"
+        android:layout_width="63dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Reset"
+        android:textColor="#B2FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
