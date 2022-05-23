@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/thetotalvolume"
+        android:title="Total Volume" />
+
+    <item
+        android:id="@+id/thegrandpiano"
+        android:title="Grand Piano" />
+
+    <item
+        android:id="@+id/theharpsichord"
+        android:title="Harpsichord" />
+
+    <item
+        android:id="@+id/theorgan"
+        android:title="Organ" />
+
+    <item
+        android:id="@+id/thekeyboard"
+        android:title="Keyboard" />
+
+    <item
+        android:id="@+id/thedx7"
+        android:title="DX7" />
+
+    <item
+        android:id="@+id/thecs80"
+        android:title="CS-80" />
+
+</menu>

@@ -1,0 +1,1474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/test"
+    tools:context=".MainActivity2">
+
+    <Button
+        android:id="@+id/buttonUpOctave"
+        android:layout_width="79dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="556dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:text="+ Octave"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDownOctave"
+        android:layout_width="79dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="556dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:text="- Octave"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.756"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDrums"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/mediadrum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="92dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Drums"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonDrums" />
+
+    <ImageButton
+        android:id="@+id/imageButtonGuitar"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/mediaguitar"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonPiano"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonDrums"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="92dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Guitar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonGuitar" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPiano"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/mediapiano"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="92dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Piano"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonPiano" />
+
+    <Button
+        android:id="@+id/c2"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b" />
+
+    <Button
+        android:id="@+id/c2backup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/b" />
+
+    <Button
+        android:id="@+id/b"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  B"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/c2"
+        app:layout_constraintStart_toEndOf="@+id/a" />
+
+    <Button
+        android:id="@+id/bbackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/c2"
+        app:layout_constraintStart_toEndOf="@+id/a" />
+
+    <Button
+        android:id="@+id/a"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  A"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/b"
+        app:layout_constraintStart_toEndOf="@+id/g" />
+
+    <Button
+        android:id="@+id/abackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/b"
+        app:layout_constraintStart_toEndOf="@+id/g" />
+
+    <Button
+        android:id="@+id/g"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  G"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/a"
+        app:layout_constraintStart_toEndOf="@+id/f" />
+
+    <Button
+        android:id="@+id/gbackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/a"
+        app:layout_constraintStart_toEndOf="@+id/f" />
+
+    <Button
+        android:id="@+id/f"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  F"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/g"
+        app:layout_constraintStart_toEndOf="@+id/e" />
+
+    <Button
+        android:id="@+id/fbackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/g"
+        app:layout_constraintStart_toEndOf="@+id/e" />
+
+    <Button
+        android:id="@+id/e"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  E"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f"
+        app:layout_constraintStart_toEndOf="@+id/d" />
+
+    <Button
+        android:id="@+id/ebackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f"
+        app:layout_constraintStart_toEndOf="@+id/d" />
+
+    <Button
+        android:id="@+id/d"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  D"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/e"
+        app:layout_constraintStart_toEndOf="@+id/c" />
+
+    <Button
+        android:id="@+id/dbackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/e"
+        app:layout_constraintStart_toEndOf="@+id/c" />
+
+    <Button
+        android:id="@+id/c"
+        android:layout_width="48dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="140dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  C"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/d"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cbackup"
+        android:layout_width="48dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="236dp"
+        android:clickable="false"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/d"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cs"
+        android:layout_width="45dp"
+        android:layout_height="113dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="   C#"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/d"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/c" />
+
+    <Button
+        android:id="@+id/ds"
+        android:layout_width="45dp"
+        android:layout_height="113dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="   D#"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/e"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toEndOf="@+id/d" />
+
+    <Button
+        android:id="@+id/fs"
+        android:layout_width="45dp"
+        android:layout_height="113dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="   F#"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/g"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toEndOf="@+id/f" />
+
+    <Button
+        android:id="@+id/gs"
+        android:layout_width="45dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="   G#"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/a"
+        app:layout_constraintStart_toEndOf="@+id/g" />
+
+    <Button
+        android:id="@+id/as"
+        android:layout_width="45dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="   A#"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/b"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/gs" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="406dp"
+        android:layout_height="217dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="144dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/css"
+        android:layout_width="35dp"
+        android:layout_height="113dp"
+        android:layout_marginBottom="249dp"
+        android:background="@drawable/border2"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="   C#"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/c2" />
+
+    <View
+        android:id="@+id/guitarpedalsview"
+        android:layout_width="406dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:background="@color/beige"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/guitarReverb"
+        android:layout_width="65dp"
+        android:layout_height="126dp"
+        android:layout_marginEnd="212dp"
+        android:background="@drawable/guitarreverb"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text=" Reverb"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/guitarDelay"
+        android:layout_width="65dp"
+        android:layout_height="126dp"
+        android:layout_marginEnd="144dp"
+        android:background="@drawable/guitardelay"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  Delay"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/guitarChorus"
+        android:layout_width="65dp"
+        android:layout_height="126dp"
+        android:layout_marginEnd="76dp"
+        android:background="@drawable/guitarchorus"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text=" Chorus"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/guitarDrive"
+        android:layout_width="65dp"
+        android:layout_height="126dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/guitardrive"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="bottom"
+        android:text="  Drive"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/guitarfretboardsview"
+        android:layout_width="406dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="#CBC36E36"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/beginningoffret"
+        android:layout_width="10dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/fret1"
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/fret2"
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/fret3"
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/fret4"
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.356"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/fret5"
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/fret6"
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/fret7"
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/fret8"
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/fret9"
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/fret10"
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/fret11"
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/fret12"
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="360dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/string1"
+        android:layout_width="406dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="536dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/string2"
+        android:layout_width="406dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="508dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/string3"
+        android:layout_width="406dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="476dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/string4"
+        android:layout_width="406dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="444dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/string5"
+        android:layout_width="406dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="412dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/string6"
+        android:layout_width="406dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="384dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/whitecircle3rdfret"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="456dp"
+        android:background="@drawable/whitecircle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/whitecircle5thfret"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="456dp"
+        android:background="@drawable/whitecircle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/whitecircle7thfret"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="456dp"
+        android:background="@drawable/whitecircle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/whitecircle9thfret"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="456dp"
+        android:background="@drawable/whitecircle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/whitecircle12thfret1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="488dp"
+        android:background="@drawable/whitecircle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/whitecircle12thfret2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="424dp"
+        android:background="@drawable/whitecircle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteC"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="408dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteD"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="440dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteE"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="440dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteF"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="440dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteG"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="472dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteA"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="472dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteB"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="504dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteC2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="504dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteCSharp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="408dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteDSharp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="440dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteFSharp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="440dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteGSharp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="472dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteASharp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="472dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteCSharp2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="504dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteEBelow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="380dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteFBelow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="380dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteFSharpBelow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="380dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteGBelow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="380dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteGSharpBelow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="380dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteABelow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="408dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteASharpBelow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="408dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteBBelow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="408dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteDAbove"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="504dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteDSharpAbove"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="504dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteEAbove"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="532dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteFAbove"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="532dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteFSharpAbove"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="532dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteGAbove"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="532dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteGSharpAbove"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="532dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteAAbove"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="532dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.412"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteASharpAbove"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="532dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteBAbove"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="532dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.616"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteC2Above"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="532dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.712"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/greenCircleNoteCSharp2Above"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="532dp"
+        android:background="@drawable/greencircle"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="564dp"
+        android:fontFamily="@font/bauhausregular"
+        android:text="Chords"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonStopGuitar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/playback2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSequencerGuitar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/record"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Sequencer"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/theRedCircleGuitar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/redcircleforsequencer"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="63dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="72dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Playback/Stop"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonVolumeGuitar"
+        android:layout_width="122dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="76dp"
+        android:color="@color/white"
+        android:fontFamily="@font/bauhausregular"
+        android:text="Volume Control"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarGuitar"
+        android:layout_width="120dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonResetGuitar"
+        android:layout_width="65dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewResetGuitar"
+        android:layout_width="63dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Reset"
+        android:textColor="#B2FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/thetotalvolume"
+        android:title="Total Volume" />
+
+    <item
+        android:id="@+id/thekick"
+        android:title="Kick" />
+
+    <item
+        android:id="@+id/thesnare"
+        android:title="Snare" />
+
+    <item
+        android:id="@+id/thehihatopen"
+        android:title="Hi-Hat Open" />
+
+    <item
+        android:id="@+id/thehihatclosed"
+        android:title="Hi-Hat Closed" />
+
+    <item
+        android:id="@+id/thestick"
+        android:title="Side-Stick" />
+
+    <item
+        android:id="@+id/thebell"
+        android:title="Bell" />
+
+    <item
+        android:id="@+id/thecrash"
+        android:title="Crash" />
+
+</menu>
