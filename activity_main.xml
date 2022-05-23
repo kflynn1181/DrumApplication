@@ -8,6 +8,29 @@
     tools:context=".MainActivity">
 
     <ImageButton
+        android:id="@+id/imageButtonReset"
+        android:layout_width="65dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="248dp"
+        android:background="@drawable/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewReset"
+        android:layout_width="63dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="248dp"
+        android:fontFamily="@font/bauhausregular"
+        android:gravity="center"
+        android:text="Reset"
+        android:textColor="#B2FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
         android:id="@+id/imageButtonStop"
         android:layout_width="40dp"
         android:layout_height="40dp"
