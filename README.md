@@ -10,7 +10,7 @@ Six individual files are contained in this repository: 'MainActivity.java', 'Mai
 
 These six files are also located inside the folder, but have been pasted outside the folder for easy viewing, as they are the most important files in this application.
 
-The three MainActivity.java files are heavily commented, making the code easy to understand.
+The MainActivity.java file is heavily commented, making the code easy to understand.
 
 I would like to thank my project supervisor, Ray Lynch, for his consistent feedback and suggestions which have helped me improve the quality of this application.
 
