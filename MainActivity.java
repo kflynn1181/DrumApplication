@@ -24,6 +24,8 @@ import android.widget.Switch;
 import android.view.View.OnTouchListener;
 import android.widget.Toast;
 
+import java.util.Arrays;
+
 //public class to initialise the app, implements the OnClick and OnTouch
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, OnTouchListener {
 
@@ -180,6 +182,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageButton myImageButtonViewRefSequencer;
     ImageButton myImageButtonViewRefStop;
 
+    //variable used for resetting sequencer
+    ImageButton myImageButtonViewRefReset;
+
     //variables used to check the states of the sequencer
     long sequencerStartTime;
     long sequencerCheckTime;
@@ -264,13 +269,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int electronicCrashDelayCheckCounter = 0; int electronicCrashDelayCheckCounter1 = 0; int electronicCrashDelayCheckCounter2 = 0; int electronicCrashDelayCheckCounter3 = 0; int electronicCrashDelayCheckCounter4 = 0; int electronicCrashDelayCheckCounter5 = 0; int electronicCrashDelayCheckCounter6 = 0; int electronicCrashDelayCheckCounter7 = 0; int electronicCrashDelayCheckCounter8 = 0; int electronicCrashDelayCheckCounter9 = 0; int electronicCrashDelayCheckCounter10 = 0; int electronicCrashDelayCheckCounter11 = 0; int electronicCrashDelayCheckCounter12 = 0; int electronicCrashDelayCheckCounter13 = 0; int electronicCrashDelayCheckCounter14 = 0; int electronicCrashDelayCheckCounter15 = 0;
     int electronicCrashReverbDelayCheckCounter = 0; int electronicCrashReverbDelayCheckCounter1 = 0; int electronicCrashReverbDelayCheckCounter2 = 0; int electronicCrashReverbDelayCheckCounter3 = 0; int electronicCrashReverbDelayCheckCounter4 = 0; int electronicCrashReverbDelayCheckCounter5 = 0; int electronicCrashReverbDelayCheckCounter6 = 0; int electronicCrashReverbDelayCheckCounter7 = 0; int electronicCrashReverbDelayCheckCounter8 = 0; int electronicCrashReverbDelayCheckCounter9 = 0; int electronicCrashReverbDelayCheckCounter10 = 0; int electronicCrashReverbDelayCheckCounter11 = 0; int electronicCrashReverbDelayCheckCounter12 = 0; int electronicCrashReverbDelayCheckCounter13 = 0; int electronicCrashReverbDelayCheckCounter14 = 0; int electronicCrashReverbDelayCheckCounter15 = 0;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    @Override //overriding, informs compiler that the element is meant to override an element in a superclass
+    protected void onCreate(Bundle savedInstanceState) { //onCreate, used to start an activity
+        super.onCreate(savedInstanceState); //used to call parent class constructor
+        setContentView(R.layout.activity_main); //method to render the layout of the screen
 
-        sp = new SoundPool(100, AudioManager.STREAM_MUSIC, 0);
+        sp = new SoundPool(250, AudioManager.STREAM_MUSIC, 0); //sp variable, used to set max amount of streams
 
+        //The following list of variables are for different drum sounds which are used to load the sound files from the res/raw folder
+        //This means that the sounds are ready to be played.
         crash = sp.load(getApplicationContext(), R.raw.cymbal4, 1);
         bell = sp.load(getApplicationContext(), R.raw.bell1, 1);
         stick = sp.load(getApplicationContext(), R.raw.stick1, 1);
@@ -355,6 +362,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         metronomeFirstBar = sp.load(getApplicationContext(), R.raw.metronomefirstbar, 1);
         metronomeSecondThirdFourthBar = sp.load(getApplicationContext(), R.raw.metronomesecondthirdfourthbar, 1);
 
+        //the following list of variables are used for setting the following buttons to the onClickListener
         myViewRefRedCircle = findViewById(R.id.theRedCircle);
         myViewRefRedCircle.setOnClickListener(this);
 
@@ -372,6 +380,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         myImageButtonViewRefStop = findViewById(R.id.imageButtonStop);
         myImageButtonViewRefStop.setOnClickListener(this);
+
+        myImageButtonViewRefReset = findViewById(R.id.imageButtonReset);
+        myImageButtonViewRefReset.setOnClickListener(this);
 
         myButtonViewRefDrumReverb = findViewById(R.id.drumReverb);
         myButtonViewRefDrumReverb.setOnClickListener(this);
@@ -400,11 +411,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonCymbal = findViewById(R.id.crashid);
         buttonCymbal.setOnTouchListener(this);
 
+        //identifying the switch id to be used for switching to acoustic and electronic
         Switch1 = (Switch) findViewById(R.id.switch1);
 
+        //variable used to find the volume button with buttonVolume id and set it for onClick
         myButtonViewRefVolumeControl = findViewById(R.id.buttonVolume);
         myButtonViewRefVolumeControl.setOnClickListener(this);
 
+        //following information used for the seekbar, or slider, to be used for total volume of application
         seekBar = findViewById(R.id.seekBar);
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         maxvolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
@@ -412,6 +426,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         seekBar.setMax(maxvolume);
         seekBar.setProgress(currentvolume);
 
+        //The id's for each drum sound seekbar are found here
         seekBarKick = findViewById(R.id.seekBarKick);
         seekBarSnare = findViewById(R.id.seekBarSnare);
         seekBarHiHatOpen = findViewById(R.id.seekBarHiHatOpen);
@@ -420,6 +435,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         seekBarBell = findViewById(R.id.seekBarBell);
         seekBarCrash = findViewById(R.id.seekBarCrash);
 
+        //setting the onSeekBarChangeListener to total volume seekbar
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -437,11 +453,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        //setting the onSeekBarChangeListener to each individual drum sound, in this case, the kick drum
         seekBarKick.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                progressChangedValueKick = seekBarKick.getProgress();
-                progressChangedValueKick = progressChangedValueKick /10;
+                progressChangedValueKick = seekBarKick.getProgress(); //finds current position of slider
+                progressChangedValueKick = progressChangedValueKick /10; //divides the current position of slider by ten. Max values are set to ten in XML file to allow ten different values. If the max value is one and fractions were found from this, it will only allow two states, one and zero. That is why ten is used as the max value, and the current progress is divided by ten
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -450,7 +467,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             public void onStopTrackingTouch(SeekBar seekBar) {
                 Toast.makeText(MainActivity.this, "Seek bar progress is :" + progressChangedValueKick,
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_SHORT).show(); //displays a message for the seek bar progress on phone display
             }
         });
 
@@ -558,44 +575,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    @Override
-    public void onClick(View view) {
+    @Override //overriding, informs compiler that the element is meant to override an element in a superclass
+    public void onClick(View view) { //method to define click of each button
+
+        //The onClick hosts the pop-up menu information. Notice the R.menu.popup_menu part. This finds the menu file (named popup_menu) from the res/menu folder.
         PopupMenu popupMenu = new PopupMenu(MainActivity.this, myButtonViewRefVolumeControl);
         popupMenu.getMenuInflater().inflate(R.menu.popup_menu, popupMenu.getMenu());
 
         switch (view.getId()) { //checks which button is pressed
 
-            case R.id.imageButtonDrums: //if the nextPage button is pressed
+            case R.id.imageButtonDrums: //if the imageButtonDrums button is pressed
             {
                 Intent intent = new Intent(this, MainActivity.class); //creates a new intent
+                sp.release(); //releases the sounds, effectively resetting SoundPool to prevent it from being overloaded
                 startActivityForResult(intent, APP2_REQUEST); //starts activity, effectively transfers from MainActivity.java to MainActivity2.java
                 break; //break statement
             }
 
-            case R.id.imageButtonGuitar: //if the nextPage button is pressed
+            case R.id.imageButtonGuitar: //if the imageButtonGuitar button is pressed
             {
                 Intent intent = new Intent(this, MainActivity2.class); //creates a new intent
+                sp.release(); //releases the sounds, effectively resetting SoundPool to prevent it from being overloaded
                 startActivityForResult(intent, APP2_REQUEST); //starts activity, effectively transfers from MainActivity.java to MainActivity2.java
                 break; //break statement
             }
 
-            case R.id.imageButtonPiano: //if the nextPage button is pressed
+            case R.id.imageButtonPiano: //if the imageButtonPiano button is pressed
             {
                 Intent intent = new Intent(this, MainActivity3.class); //creates a new intent
+                sp.release(); //releases the sounds, effectively resetting SoundPool to prevent it from being overloaded
                 startActivityForResult(intent, APP2_REQUEST); //starts activity, effectively transfers from MainActivity.java to MainActivity2.java
                 break; //break statement
             }
 
-            case R.id.buttonVolume: //if the nextPage button is pressed
+            case R.id.buttonVolume: //if the buttonVolume button is pressed
             {
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
-                        // Toast message on menu item clicked
-                        Toast.makeText(MainActivity.this, "Volume Control for " + menuItem.getTitle(), Toast.LENGTH_SHORT).show();
-                        if(menuItem.getTitle().equals("Total Volume")) {
-                            seekBar.setVisibility(View.VISIBLE);
-                            seekBarKick.setVisibility(View.INVISIBLE);
+                        Toast.makeText(MainActivity.this, "Volume Control for " + menuItem.getTitle(), Toast.LENGTH_SHORT).show(); //displays message on screen, telling user the volume control item they have selected
+                        //if statements are used to find which seekbar has been pressed by the user on the pop-up menu
+                        if(menuItem.getTitle().equals("Total Volume")) { //if Total Volume has been selected
+                            seekBar.setVisibility(View.VISIBLE); //set the Total Volume seekbar to be visible and active
+                            seekBarKick.setVisibility(View.INVISIBLE); //set the rest of the sliders to be invisible and inactive
                             seekBarSnare.setVisibility(View.INVISIBLE);
                             seekBarHiHatOpen.setVisibility(View.INVISIBLE);
                             seekBarHiHatClosed.setVisibility(View.INVISIBLE);
@@ -676,13 +698,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         return true;
                     }
                 });
-                popupMenu.show();
+                popupMenu.show(); //display the pop-up menu on screen
                 break; //break statement
             }
 
-            case R.id.imageButtonSequencer:
+            case R.id.imageButtonSequencer: //if the imageButtonSequencer has been selected
             {
-
+                //set the metronome values to true, essentially activating the metronome in the two-dimensional boolean array
                 sequencerBoolean[0][0] = true;
                 sequencerBoolean[1][0] = true;
                 sequencerBoolean[2][0] = true;
@@ -699,137 +721,171 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 sequencerBoolean[13][0] = true;
                 sequencerBoolean[14][0] = true;
                 sequencerBoolean[15][0] = true;
-                final Handler handlerMetronome = new Handler();
+                final Handler handlerMetronome = new Handler(); //creating a handler to be used for asynchronisity
 
                 if (myImageButtonViewRefSequencer.isPressed() && sequencerCounter==2) {
                     myViewRefRedCircle.setVisibility(View.GONE);
                     sequencerCounter = 0;
                 }
                 else {
-                    myViewRefRedCircle.setVisibility(View.VISIBLE);
-                    sequencerCounter = 1;
-                    sequencerStartTime = System.currentTimeMillis();
-                    if (sequencerBoolean[0][0] == true) {
-                        handlerMetronome.postDelayed(new Runnable() {
-                            public void run() {
-                                sp.play(metronomeFirstBar, 1.0f, 1.0f, 0, 0, 1.0f);
-                                //if i want to loop the code then uncomment below
-                                //if (countering==0) {
-                                    //handlerMetronome.postDelayed(this, 4000);
-                                //}
-                            }
-                        }, 0);
-                    }
-                    if (sequencerBoolean[2][0] == true) {
-                        handlerMetronome.postDelayed(new Runnable() {
-                            public void run() {
-                                sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
-                            }
-                        }, 550);
-                    }
-                    if (sequencerBoolean[4][0] == true) {
-                        handlerMetronome.postDelayed(new Runnable() {
-                            public void run() {
-                                sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
-                            }
-                        }, 1050);
-                    }
-                    if (sequencerBoolean[6][0] == true) {
-                        handlerMetronome.postDelayed(new Runnable() {
-                            public void run() {
-                                sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
-                            }
-                        }, 1550);
-                    }
-                    if (sequencerBoolean[8][0] == true) {
-                        handlerMetronome.postDelayed(new Runnable() {
-                            public void run() {
-                                sp.play(metronomeFirstBar, 1.0f, 1.0f, 0, 0, 1.0f);
-                            }
-                        }, 2050);
-                    }
-                    if (sequencerBoolean[10][0] == true) {
-                        handlerMetronome.postDelayed(new Runnable() {
-                            public void run() {
-                                sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
-                            }
-                        }, 2550);
-                    }
-                    if (sequencerBoolean[12][0] == true) {
-                        handlerMetronome.postDelayed(new Runnable() {
-                            public void run() {
-                                sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
-                            }
-                        }, 3050);
-                    }
-                    if (sequencerBoolean[14][0] == true) {
-                        handlerMetronome.postDelayed(new Runnable() {
-                            public void run() {
-                                sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
-                            }
-                        }, 3550);
-                    }
+                    myViewRefRedCircle.setVisibility(View.VISIBLE); //display the red circle to show the user that the button has been activated
+                        sequencerCounter = 1; //set the sequencerCounter to one, an on state
+                        sequencerStartTime = System.currentTimeMillis(); //finds the current time, will be used to compare how long it takes for buttons to be pressed once activating the sequencer
 
-                    handlerMetronome.postDelayed(new Runnable() {
-                        public void run() {
-                            //sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
-                            myViewRefRedCircle.setVisibility(View.GONE);
-                            sequencerCounter = 0;
+                    //the following lines of code are used to play metronome sounds asynchronously, allowing the user to play sounds while metronome is running
+                        if (sequencerBoolean[0][0] == true) {
+                            handlerMetronome.postDelayed(new Runnable() {
+                                public void run() {
+                                    sp.play(metronomeFirstBar, 1.0f, 1.0f, 0, 0, 1.0f);
+                                    //if i want to loop the code then uncomment below
+                                    //if (countering==0) {
+                                    //handlerMetronome.postDelayed(this, 4000);
+                                    //}
+                                }
+                            }, 0); //0ms delay, meaning that this sound plays immediately once activating sequencer
                         }
-                    }, 4000);
+                        if (sequencerBoolean[2][0] == true) {
+                            handlerMetronome.postDelayed(new Runnable() {
+                                public void run() {
+                                    sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
+                                }
+                            }, 550); //550ms delay, meaning that this sound plays after 550ms of starting sequencer, and so on
+                        }
+                        if (sequencerBoolean[4][0] == true) {
+                            handlerMetronome.postDelayed(new Runnable() {
+                                public void run() {
+                                    sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
+                                }
+                            }, 1050);
+                        }
+                        if (sequencerBoolean[6][0] == true) {
+                            handlerMetronome.postDelayed(new Runnable() {
+                                public void run() {
+                                    sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
+                                }
+                            }, 1550);
+                        }
+                        if (sequencerBoolean[8][0] == true) {
+                            handlerMetronome.postDelayed(new Runnable() {
+                                public void run() {
+                                    sp.play(metronomeFirstBar, 1.0f, 1.0f, 0, 0, 1.0f);
+                                }
+                            }, 2050);
+                        }
+                        if (sequencerBoolean[10][0] == true) {
+                            handlerMetronome.postDelayed(new Runnable() {
+                                public void run() {
+                                    sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
+                                }
+                            }, 2550);
+                        }
+                        if (sequencerBoolean[12][0] == true) {
+                            handlerMetronome.postDelayed(new Runnable() {
+                                public void run() {
+                                    sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
+                                }
+                            }, 3050);
+                        }
+                        if (sequencerBoolean[14][0] == true) {
+                            handlerMetronome.postDelayed(new Runnable() {
+                                public void run() {
+                                    sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
+                                }
+                            }, 3550);
+                        }
+
+                        handlerMetronome.postDelayed(new Runnable() {
+                            public void run() {
+                                //sp.play(metronomeSecondThirdFourthBar, 1.0f, 1.0f, 0, 0, 1.0f);
+                                myViewRefRedCircle.setVisibility(View.GONE);
+                                sequencerCounter = 0;
+                            }
+                        }, 4000);
 
 
 
                 }
-                break;
+                break; //break statement
             }
 
-            case R.id.drumReverb:
+            case R.id.drumReverb: //if the drumReverb button is pressed
             {
-                if (myButtonViewRefDrumReverb.isPressed() && drumReverbCounter==1) {
-                    myButtonViewRefDrumReverb.setBackgroundResource(R.drawable.drumreverb);
-                    drumReverbCounter = 0; }
+                //this section of code is essentially a system for showing the user if the reverb button is activated
+                if (myButtonViewRefDrumReverb.isPressed() && drumReverbCounter==1) { //if the drum reverb button is pressed and the reverb counter is one, essentially meaning if reverb is activated
+                    myButtonViewRefDrumReverb.setBackgroundResource(R.drawable.drumreverb); //displays a red circle on reverb button
+                    drumReverbCounter = 0; } //sets reverb counter to zero
 
-                else {
-                    myButtonViewRefDrumReverb.setBackgroundResource(R.drawable.drumreverb2);
-                    drumReverbCounter = 1; }
+                else { //otherwise
+                    myButtonViewRefDrumReverb.setBackgroundResource(R.drawable.drumreverb2); //displays a grey circle on reverb button
+                    drumReverbCounter = 1; } //sets reverb counter to one
 
                 break; //break statement
 
             }
 
-            case R.id.drumDelay:
+            case R.id.drumDelay: //if the drumDelay is pressed
             {
-                if (myButtonViewRefDrumDelay.isPressed() && drumDelayCounter==1) {
-                    myButtonViewRefDrumDelay.setBackgroundResource(R.drawable.drumdelay);
-                    drumDelayCounter = 0; }
+                //this section of code is essentially a system for showing the user if the delay button is activated
+                if (myButtonViewRefDrumDelay.isPressed() && drumDelayCounter==1) { //if the drum delay button is pressed and the delay counter is one, essentially meaning if reverb is activated
+                    myButtonViewRefDrumDelay.setBackgroundResource(R.drawable.drumdelay); //displays a red circle on delay button
+                    drumDelayCounter = 0; } //sets delay counter to zero
 
-                else {
-                    myButtonViewRefDrumDelay.setBackgroundResource(R.drawable.drumdelay2);
-                    drumDelayCounter = 1; }
+                else { //otherwise
+                    myButtonViewRefDrumDelay.setBackgroundResource(R.drawable.drumdelay2); //displays a grey circle on delay button
+                    drumDelayCounter = 1; } //sets delay counter to zero
 
                 break; //break statement
 
             }
 
-            case R.id.imageButtonStop: //if the nextPage button is pressed
+            case R.id.imageButtonReset: //if the imageButonReset is pressed
             {
+                //sets the entire boolean array to false, effectively resetting any active sound, as only sounds can be played if they are true
+                java.util.Arrays.fill(sequencerBoolean[0], false);
+                java.util.Arrays.fill(sequencerBoolean[1], false);
+                java.util.Arrays.fill(sequencerBoolean[2], false);
+                java.util.Arrays.fill(sequencerBoolean[3], false);
+                java.util.Arrays.fill(sequencerBoolean[4], false);
+                java.util.Arrays.fill(sequencerBoolean[5], false);
+                java.util.Arrays.fill(sequencerBoolean[6], false);
+                java.util.Arrays.fill(sequencerBoolean[7], false);
+                java.util.Arrays.fill(sequencerBoolean[8], false);
+                java.util.Arrays.fill(sequencerBoolean[9], false);
+                java.util.Arrays.fill(sequencerBoolean[10], false);
+                java.util.Arrays.fill(sequencerBoolean[11], false);
+                java.util.Arrays.fill(sequencerBoolean[12], false);
+                java.util.Arrays.fill(sequencerBoolean[13], false);
+                java.util.Arrays.fill(sequencerBoolean[14], false);
+                java.util.Arrays.fill(sequencerBoolean[15], false);
+
+                Toast.makeText(MainActivity.this, "Sequencer Reset", Toast.LENGTH_SHORT).show(); //message displays on screen, telling user the sequencer has been reset
+
+                break; //break statement
+            }
+
+            case R.id.imageButtonStop: //if the imageButtonStop button is pressed
+            {
+                //if the imageButtonStop has been pressed an even number of times, for stopped state
                 if (testVariable == 1) {
                     checkPresses = checkPresses - 1;
                     testVariable = 0;
+                    Toast.makeText(MainActivity.this, "Stopped state", Toast.LENGTH_SHORT).show(); //message to display to user that button is in a stopped state and not playback state. They must press again for a playback state
                 }
+                //if the imageButtonStop has been pressed an odd number of times, for playback state
                 else {
                     checkPresses = checkPresses + 1;
                     testVariable = 1;
+                    Toast.makeText(MainActivity.this, "Playback state", Toast.LENGTH_SHORT).show(); //message to display to user that button is in a playback state
                 }
 
+                //handler to be used for asynchronous activity
                 final Handler handler = new Handler();
 
 
-                if (sequencerCounter == 0 && checkPresses == 1) {
+                if (sequencerCounter == 0 && checkPresses == 1) { //if sequencer is turned off and if playback mode (not stopped mode) is activated
                     //while (sequencerCounter==0) {
                     if (sequencerBoolean[0][1] == true) {
-                        handler.postDelayed(new Runnable() {
+                        handler.postDelayed(new Runnable() { //dot post delayed, for delaying an action to be performed by a certain amount of time
                             public void run() { //this is asynchronous which is why checkpresses is here and also in the larger if statement
                                 if (checkPresses == 1) {
                                     if (kickCheckCounter==1) { sp.play(kick, progressChangedValueKick, progressChangedValueKick, 0, 0, 1.0f); }
@@ -841,13 +897,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     if (electronicKickDelayCheckCounter==1) { sp.play(electronickickdelay, progressChangedValueKick, progressChangedValueKick, 0, 0, 1.0f); }
                                     if (electronicKickReverbDelayCheckCounter==1) { sp.play(electronickickreverbdelay, progressChangedValueKick, progressChangedValueKick, 0, 0, 1.0f); }
                                     if (countering==0) {
-                                        handler.postDelayed(this, 4000); }
+                                        handler.postDelayed(this, 4000); } //nested handler, allowing sound to be looped after four seconds of sound being heard
                                     if(checkPresses == 0) {
                                         sp.autoPause();
                                     }
                                 }
                             }
-                        }, 250);
+                        }, 250); //sound will be played after 250ms
                     }
                     if (sequencerBoolean[1][1] == true) {
                         handler.postDelayed(new Runnable() {
@@ -3186,88 +3242,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }, 4000);
                     }
 
-                    //if (checkPresses > 1) {
-                    //handler.removeCallbacks(Runnable);
-                    //sp.autoPause();
-                    //System.out.println("Hi");
-                    //sp.autoResume();
-                    //}
-
                 }
-                //if (sequencerCounter == 0 && checkPresses > 1) {
-                //else {
-                    //sp.autoPause();
-                    //sp.pause(this);
-                    //handler.removeCallbacksAndMessages(null);
-                    //System.out.println("Hi there");
-                    //sp.autoResume();
-                    //sp.release();
-                //}
                 break;
             }
-
-
-            //}
-
-            /*case R.id.imageButtonPlay: //if the nextPage button is pressed
-            {
-                if (myImageButtonViewRefPlay.isPressed()) {
-                    sequencerCounter = 1;
-                    //stopRecording();
-                    //mediaRecorder.stop();
-                    //mediaRecorder.release();
-                    mediaRecorder.stop();
-                    //MediaRecorder.reset();   // You can reuse the object by going back to setAudioSource() step
-                    mediaRecorder.release(); // Now the object cannot be reused
-                    //MediaRecorder = null;
-
-                    mediaPlayer = new MediaPlayer();
-                    try {
-                        ContextWrapper contextWrapper = new ContextWrapper(getApplicationContext());
-                        File musicDirectory = contextWrapper.getExternalFilesDir(Environment.DIRECTORY_MUSIC);
-                        File file = new File(musicDirectory, "testRecordingFile" + ".mp3");
-                        String thisone = file.getPath();
-                        mediaPlayer.setDataSource(thisone);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    try {
-                        mediaPlayer.prepare();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    mediaPlayer.start();
-                }
-
-                else{
-                    sequencerCounter = 0;
-                }
-            }*/
-
 
 
         }
     }
 
         @Override
-        public boolean onTouch (View view, MotionEvent motionEvent){
+        public boolean onTouch (View view, MotionEvent motionEvent){ //the onTouch
 
-            switch(view.getId()) {
-                case R.id.kickid:
+            switch(view.getId()) { //checks which button is pressed
+                case R.id.kickid: //if the kick drum is pressed
+                    //this section of code effectively finds the states of which sound was pressed by the user and wheter or not they have the sequencer activated, or reverb activated, or electronic drums set, etc
+                    //if the button is pressed down and the switch is checked (meaning electronic drums are set) and sequencerCounter is zero (meaning sequencer is not activated) and drumReverbCounter and drumDelayCounter are zero (meaning reverb and delay are not activated)
                     if (motionEvent.getAction() == MotionEvent.ACTION_DOWN && Switch1.isChecked() && sequencerCounter == 0 && drumReverbCounter == 0 && drumDelayCounter == 0) {
-                        sp.play(electronickick, progressChangedValueKick, progressChangedValueKick, 0, 0, 1.0f);
+                        sp.play(electronickick, progressChangedValueKick, progressChangedValueKick, 0, 0, 1.0f); //play electronic kick sound
                     }
-
+                    //if the button is pressed down and the switch is not checked (meaning acoustic drums are set) and sequencerCounter is zero (meaning sequencer is not activated) and drumReverbCounter and drumDelayCounter are zero (meaning reverb and delay are not activated)
                     if (motionEvent.getAction() == MotionEvent.ACTION_DOWN && !Switch1.isChecked() && sequencerCounter==0 && drumReverbCounter==0 && drumDelayCounter==0) {
-                        sp.play(kick, progressChangedValueKick, progressChangedValueKick, 0, 0, 1.0f);
+                        sp.play(kick, progressChangedValueKick, progressChangedValueKick, 0, 0, 1.0f); //play acoustic kick sound
                     }
+                    //if the button is pressed down and the switch is checked (meaning electronic drums are set) and sequencerCounter is one (meaning sequencer is activated) and drumReverbCounter and drumDelayCounter are zero (meaning reverb and delay are not activated)
                     if (motionEvent.getAction() == MotionEvent.ACTION_DOWN && Switch1.isChecked() && sequencerCounter==1 && drumReverbCounter==0 && drumDelayCounter==0) {
-                        sp.play(electronickick, progressChangedValueKick, progressChangedValueKick, 0, 0, 1.0f);
-                        sequencerCheckTime = System.currentTimeMillis(); //1
-                        sequencerCompareTime = (sequencerCheckTime - sequencerStartTime); //2
-                        if (sequencerCompareTime >= 0 && sequencerCompareTime <= 250) { //3
-                            sequencerBoolean[0][1] = true; //3
-                            electronicKickCheckCounter = 1;
+                        sp.play(electronickick, progressChangedValueKick, progressChangedValueKick, 0, 0, 1.0f); //play electronic kick sound
+                        sequencerCheckTime = System.currentTimeMillis(); //start timer
+                        sequencerCompareTime = (sequencerCheckTime - sequencerStartTime); //subtract the timer of drum button pressed from sequencer start time to find length of time from starting sequencer and pressing a drum sound button
+                        if (sequencerCompareTime >= 0 && sequencerCompareTime <= 250) { //if the time between is from 0ms to 250ms
+                            sequencerBoolean[0][1] = true; //place a true in [0][1] where 0 is the first music bar and 1 is the kick drum
+                            electronicKickCheckCounter = 1; //electronicKickCheckCounter set to 1
                             //Log.d("checkkick", "kick placed in first bar");
                         }
                         if (sequencerCompareTime >= 251 && sequencerCompareTime <= 500) { //3
@@ -8215,10 +8219,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             //Log.d("checkcymbal", "cymbal placed in sixteenth bar");
                         }
                     }
-                    break;
+                    break; //break statement
             }
-            return false;
+            return false; //return false
         }
 
     }
+
 
