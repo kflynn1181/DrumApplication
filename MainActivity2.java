@@ -1,3 +1,6 @@
+//Final Project Drum Application
+//Code created by Kevin Flynn (C18502203)
+
 package com.example.drummachinetest1;
 
 import androidx.appcompat.app.AppCompatActivity;
